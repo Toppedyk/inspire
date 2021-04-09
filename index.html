@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>inspire</title>
+</head>
+
+<body>
+    <header class = "container-fluid">
+        <div class="row">
+        <nav class="navbar navbar-dark navbar-expand bg-transparent text-light col-9">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
+                <span class="ml-2">inspire</span>
+            </a>
+        </nav>
+        <div class="col-3" id="weather">
+            WEATHER
+        </div>
+    </div>
+    </header>
+
+    <main class = "container-fluid">
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
+       <h1 id = "time">TIME</h1> 
+    </div>
+</div>
+<div class="row justify-content-end">
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+              To-Do List: 
+            </div>
+                <div id = 'tasks'>
+                </div>
+                <form onsubmit="app.tasksController.addTask()" class="d-flex">
+                    <input type="text" name="description" id="description" class="form-control" placeholder="Add New Task..."
+                    aria-describedby="helpId" required minlength="3" maxlength="50" autocomplete="off">
+                <button type="submit" class="btn btn-success" title='add task'><i class="fas fa-plus" ></i></button>
+                </form>
+                
+          </div>
+    </div>
+</div>
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+        <div class="row justify-content-center"> 
+            <div class="col-6" id="quote">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
