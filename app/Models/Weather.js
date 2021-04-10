@@ -9,8 +9,8 @@ constructor({name, main}){
 
 get Template(){
   return `
-  <div class="card d-flex" onclick="app.weathersController.changeWeather()">
-    <div class="card-body">
+  <div class="card d-flex  myCardBody shadow" onclick="app.weathersController.changeWeather()">
+    <div class="card-body p-1">
       <h5 class="card-title">Location: ${this.name}</h5>
       <h6 class="card-subtitle mb-2 text-muted">${this.checked ? this.f+'°F' : this.c+'°C'}</h6>
     </div>

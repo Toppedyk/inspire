@@ -10689,6 +10689,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
@@ -10705,6 +10707,28 @@ main {
 
 .myQuote {
   cursor: pointer;
+}
+
+.clock {
+  font-size: 100px;
+  color: yellow;
+}
+
+.myCardHeader {
+  background: black;
+  color: white;
+}
+
+.myCardBody {
+  background: rgba(255, 255, 255, 0.747);
+  color: black;
+  font-weight: bold;
+}
+
+.todoList {
+  position: fixed;
+  bottom: 150px;
+  right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
