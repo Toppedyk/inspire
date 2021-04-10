@@ -8,9 +8,22 @@ function _drawTasks(){
   document.getElementById('tasks').innerHTML = template
 }
 
+function _countTasks(){
+  let tasks = ProxyState.myTasks
+  let total = tasks.length
+  let done = 0
+  tasks.forEach(t => {
+    if(t.completed === true){
+      done+=1
+    }
+  })
+  document.getElementById('listHeader').innerHTML = `To-Do List: ${done}/${total}`
+}
+
 export default class TasksController{
   constructor(){
     ProxyState.on('myTasks', _drawTasks)
+    ProxyState.on('myTasks', _countTasks)
     this.getTasks()
   }
 

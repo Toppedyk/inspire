@@ -23,6 +23,7 @@ async checkTask(id){
     task.completed = false
   }
   await sandboxApi.put(task.id, task)
+  ProxyState.myTasks=ProxyState.myTasks
 }
 
 async removeTask(id){
